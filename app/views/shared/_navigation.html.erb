@@ -20,8 +20,15 @@
         Blog
       </a>
     </div>
+    
     <div>
-      <a href="#" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">Login</a>
+    <% if user_signed_in? %>
+    Logged in as <strong><%= current_user.email %></strong>.
+    <%= link_to 'Edit Profile', edit_user_registration_path, class: 'inline-block text-sm' %>
+    <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'inline-block text-sm' %>
+    <% else %>
+    <%= link_to "Login", new_user_session_path, class: "inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0" %>
     </div>
+    <% end %>
   </div>
 </nav>
