@@ -1,37 +1,18 @@
-<nav class="flex items-center justify-between flex-wrap bg-gray400 p-6">
-  <div class="flex items-center flex-shrink-0 mr-6">
-    <%= image_tag 'logo_momscanco.png', class: "fill-current h-10 w-12 mr-2" %>
-    <span class="font-semibold text-xl tracking-tight"><a href="https://network.momscan.co/">Moms Can & Co</a></span>
-  </div>
-  <div class="block lg:hidden">
-    <button id="nav-toggle" class="flex items-center px-3 py-2 border rounded text-black border-black hover:text-yellow-500 hover:border-yellow-500">
-      <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-        <title>Menu</title>
-        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
-      </svg>
-    </button>
-  </div>
-  <% if user_signed_in? %>
-  <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block pt-6 lg:pt-0" id="nav-content">
-    <div class="text-sm lg:flex-grow">
-      <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-black-200 hover:text-yellow-400 mr-4">
-        Resources
-      </a>
-      <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-black-200 hover:text-yellow-400 mr-4">
-        Padlet
-      </a>
-      <a href="https://moms-can-co.github.io/blog/" class="block mt-4 lg:inline-block lg:mt-0 text-black-200 hover:text-yellow-400">
-        Blog
-      </a>
-    </div>
+  <header class="relative z-20 w-full flex justify-between items-center h-20">
     
-    <div>
-      Welcome <strong><%= current_user.email %></strong>
-      <%= link_to 'Profile', edit_user_registration_path, class: 'inline-block p-3 text-sm text-black-200 hover:text-yellow-400' %>
-      <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'inline-block text-sm text-black-200 hover:text-yellow-400' %>
+    <%= link_to 'Moms Can & Co', root_path, class: "text-3xl text-black ml-2 leading-tight" %>
+    
+		<% if user_signed_in? %>
+    <div class="flex text-sm lowercase italic">
+      <a href="https://network.momscan.co/" class="ml-4">MCC Network</a>
+      <a href="#" class="ml-4">Calendar</a>
+      <a href="#" class="ml-4">Blog</a>
+      <a href="#" class="ml-4">Resources</a>
+			<%= link_to 'logout', logout_path %>
+    </div>
       <% else %>
-      <%= link_to "Login", login_path, class: "bg-yellow-500 hover:bg-gray-900 text-black hover:text-white rounded shadow hover:shadow-lg py-2 px-4 border hover:border-transparent" %>
-      </div>
-    <% end %>
-  </div>
-</nav>
+      <div class="h-full flex items-center text-black justify-between uppercase tracking-wide font-bold text-sm">
+        <%= link_to "Login", login_path, class: "text-black font-bold hover:text-yellow-500 py-2 px-4" %>
+      </div>  
+      <% end %>
+		</header>

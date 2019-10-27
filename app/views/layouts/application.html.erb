@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
+    
     <title>Cornucopia</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    
+    <link href="https://fonts.googleapis.com/css?family=Lora|Muli&display=swap" rel="stylesheet">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body class="text-gray-700 bg-white" style="font-family: 'Muli', sans-serif;" cz-shortcut-listen="true">
+    
+    
     <%= render 'shared/navigation' %>
+    
     <% if notice %>
       <p class="alert alert-success"><%= notice %></p>
     <% end %>

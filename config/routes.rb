@@ -2,7 +2,11 @@ Rails.application.routes.draw do
 
   
   get 'resource/index'
+
+  get 'welcome', to: 'home#landing'
+
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+
   root to:  'home#index'
   resources :home, only: :index
   
@@ -15,7 +19,7 @@ Rails.application.routes.draw do
   end 
   
   devise_scope :user do   
-    get '/logout', to: 'devise/sessions#destroy'
+    get 'logout', to: 'devise/sessions#destroy'
   end 
 
   devise_for :users

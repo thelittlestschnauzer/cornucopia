@@ -1,20 +1,25 @@
+	<div class="w-full h-screen relative p-16">
+	<div class="relative z-20 flex flex-wrap h-full -mt-20 pt-32">
+				
+				<div class="w-full md:w-1/2 h-full">
+					<%= image_tag 'caroline-hernandez.jpg', class: "w-full h-full object-cover" %> 
+				</div>
 
-<!--Hero-->
-	<div class="container mx-auto flex flex-col md:flex-row items-center my-12 md:my-24">
-		<!--Left Col-->
-		<div class="flex flex-col w-full lg:w-1/2 justify-center items-start pt-12 pb-24 px-6">
-			<p class="uppercase tracking-loose">Optimizing moms for remote careers in tech.</p>
-			<h1 class="font-bold text-3xl my-4">Student Resources</h1>
-			<p class="leading-normal mb-4">Sign up so you don't miss out on all the resources MCC has collected to enhance your learning experience.</p>
-			<button class="bg-yellow-500 hover:bg-gray-900 text-black hover:text-white rounded shadow hover:shadow-lg py-2 px-4 border hover:border-transparent"><%= link_to 'Sign Up', signup_path %></button>
+				<div class="w-full md:w-1/2 p-10 flex justify-center items-center">
+					
+					<div class="max-w-xs">
+						<h1 class="text-6xl mb-4 leading-none">Welcome</h1>
+						<p class="mb-8 text-sm leading-relaxed">
+						Create your student account for access to resources and other important information. 
+						</p>
+            <div class="">
+            <%= link_to 'Sign up', signup_path, class: 'bg-yellow-500 text-black uppercase bold-font rounded text-xs px-4 py-3 hover:bg-black hover:text-white' %>
+            </div>
+					</div>
+				</div>
+			</div>
+      <div class="z-10 w-1/2 h-full bg-gray-900 absolute top-0 left-0 -ml-20"></div>
+			<div class="z-10 w-1 h-64 bg-gray-100 absolute bottom-0 left-0 ml-5"></div>
+			
 		</div>
-
-		<!--Right Col-->
-		<div class="w-full lg:w-1/2 lg:py-6 text-center">
-			<!--Add your product image here-->
-			<%= image_tag 'thomas.jpg' %>
-		</div>
-		
-	</div>
-	
-
+</div>
