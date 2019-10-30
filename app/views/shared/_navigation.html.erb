@@ -5,10 +5,10 @@
 		<% if user_signed_in? %>
     <div class="flex text-sm lowercase italic">
       <a href="https://network.momscan.co/" class="ml-4">MCC Network</a>
-      <a href="#" class="ml-4">Calendar</a>
-      <a href="#" class="ml-4">Blog</a>
-      <a href="#" class="ml-4">Resources</a>
-			<%= link_to 'logout', logout_path %>
+      <a href="#" class="ml-4 px-4">Calendar</a>
+      <a href="#" class="ml-4 px-4">Blog</a>
+      <a href="#" class="ml-4 px-4">Resources</a>
+			<%= link_to 'logout', logout_path, class: "ml-4 px-4" %>
     </div>
       <% else %>
       <div class="h-full flex items-center text-black justify-between uppercase tracking-wide font-bold text-sm">

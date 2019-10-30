@@ -1,0 +1,12 @@
+Welcome to Moms Can & Co, <%= @user.name %>
+===========================================
+
+You have successfully signed up for your course!
+
+Thanks for joining and please click the following link
+to gain access to your Student Develop Pack! 
+
+<%= link_to "GitHub Student", @user.github_student_url %>
+
+Also, please be sure to check back with us everyday for new
+resources and messages about the program. 

@@ -6,13 +6,13 @@ class User < ApplicationRecord
 
          def github_student_url
           # The School ID GitHub gave you
-          school_id = "your-school-id"
+          school_id = "23028"
           
           # The secret key GitHub gave you
-          secret_key = "secret-key"
-          
+          secret_key = "2681aec6830ccc21485255d445e7dfe66c9bb2fd";
+
           # The ID of the student in your database
-          student_id = id.to_s
+          student_id = @user_id.to_s
           
           # Generate the signature
           signature = OpenSSL::HMAC.hexdigest(OpenSSL::Digest.new('sha256'), secret_key, school_id + student_id)
