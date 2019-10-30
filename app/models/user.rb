@@ -9,7 +9,7 @@ class User < ApplicationRecord
           school_id = "23028"
           
           # The secret key GitHub gave you
-          secret_key = "2681aec6830ccc21485255d445e7dfe66c9bb2fd";
+          secret_key = secret_key
 
           # The ID of the student in your database
           student_id = @user_id.to_s

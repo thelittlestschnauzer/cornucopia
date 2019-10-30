@@ -1,11 +1,19 @@
-<h1>Welcome to Moms Can & Co, <%= @user.first_name %></h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Welcome <%= @user.name %>!</h1>
+    <p>
+      Please click the following url so that you can access your
+      Student GitHub Pack! 
 
-<p>
-  You have successfully registered with Moms Can & Co!
-</p>
+      <%= link_to "GitHub Student", @user.github_student_url %>
 
-<p>
-  We are excited you have enrolled in our course. If you have any questions please contact your instructor or hello@momscan.co. 
-</p>
+    </p>
+    
+    <p>Thanks for joining and have a great day!</p>
+  </body>
+</html>
 
-<%= link_to "GitHub Student", @user.github_student_url %>
